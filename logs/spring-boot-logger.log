@@ -1,0 +1,313 @@
+2022-03-16 14:32:07,895 INFO org.springframework.boot.StartupInfoLogger [main] Starting BoxConnectionTestApplication using Java 1.8.0_312 on mbp-004574 with PID 11316 (/Users/jvandermerwe/eclipse-workspace/BoxConnectionTest/target/classes started by jvandermerwe in /Users/jvandermerwe/eclipse-workspace/BoxConnectionTest)
+2022-03-16 14:32:07,896 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-03-16 14:32:08,099 INFO org.springframework.boot.StartupInfoLogger [main] Started BoxConnectionTestApplication in 0.367 seconds (JVM running for 5.142)
+2022-03-16 14:32:08,100 INFO com.box.bc.boxconnectiontest.CommandRunner [main] Connect Test Start
+2022-03-16 14:32:08,590 DEBUG com.box.sdk.BoxLogger [main] Request
+POST https://api.box.com/oauth2/token
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:09,133 DEBUG com.box.sdk.BoxLogger [main] Response
+POST https://api.box.com/oauth2/token
+HTTP/1.1 200 OK
+Strict-Transport-Security: max-age=31536000
+Cache-Control: no-store
+Connection: keep-alive
+Set-Cookie: site_preference=desktop; path=/; domain=.box.com; secure, cn=30; expires=Thu, 16-Mar-2023 14:32:08 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, bv=OPS-45085; expires=Wed, 23-Mar-2022 14:32:08 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, box_visitor_id=6231f4e8df76a1.31629286; expires=Thu, 16-Mar-2023 14:32:08 GMT; Max-Age=31536000; path=/; domain=.box.com; secure
+Content-Length: 996
+Date: Wed, 16 Mar 2022 14:32:09 GMT
+Content-Type: application/json
+
+{"access_token":"1!bszqGdTv3_cy0yRGxOJARUqM_90Ne2DfPeiaH-wVTLOF7OhcKpV-ryp3fF_LgkdEMyNsUzojOybIY4R8GHp14fvcvMG19XSnmwgMrEIEnGDJlaKdoC4E_ihP7OabCnkMuu3KEJWaHoZqCjk_boXVLPjqxQi1_S2vJqUlXPDvlV5nXxQkmP9YMWH0OiRjUli21JUSfvuLlQaJTc_7UoAXOhN_B2Dtr34rDCJCz_r_9vDqpypEBnLVEXRHEbQzRv_cfQnwDwpYJ_YVFQONH5zo6E60XnmEw_Y5PSz7rQZCir9nveVr32CaL5QZfxqTvjbjuODlcC7XFpPouqWQIddCjcFwZZ5F7m9GarP3iBENgIErUURHQoDQ9Wm9qImICQZP3EBYnLp9sKSAYRNRD7n89RpO5PC3vGAtOF6wAT5Pn8bnuQZfeex8NXlEDgVGvwLNPYM3SSiZnDVZiTB2m4rP_1K2IMpfjnjY7ht8t1Nxr7gxDhoa1Y8tLXuBu5RvfV3n2FodHIACldYTVTBMS51HeMLJV6PURxHyY5YOtQ65iMZZKMB5fGD2WR0UFhtoMXWuMJsfkhmFZepCeoIphD55CN7ATEPrm7zldVt8hIkjsfJsFX0WQB1YhnhiEkn-VRfNYCXO55ucT1ZsbbpwufsnPbtgGjISEHDrZ7me58XfSPGsBu1ThpQ3aV9dYsrUgaxQ59R9MGU4zEKOAqt5qoV6eHz5Azd1RihOM0PnkEYF_VLM9XYluRNcucQESDtPkW_TfLu_Kq2SLs5hx5LbamNGJ5w_1hrhTgPna-FEWThi30bBWw-oAbpGOJVnpVnBntrlUR1jgZTDplFce-D5W8e0Hl-BSq_9LEgOskUjeBFxF6SZGb97evQ958nCySeRi6j4XSTOK3DlIE4TEFClvg..","expires_in":4259,"restricted_to":[],"token_type":"bearer"}
+2022-03-16 14:32:09,136 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Service Account Token: 1!bszqGdTv3_cy0yRGxOJARUqM_90Ne2DfPeiaH-wVTLOF7OhcKpV-ryp3fF_LgkdEMyNsUzojOybIY4R8GHp14fvcvMG19XSnmwgMrEIEnGDJlaKdoC4E_ihP7OabCnkMuu3KEJWaHoZqCjk_boXVLPjqxQi1_S2vJqUlXPDvlV5nXxQkmP9YMWH0OiRjUli21JUSfvuLlQaJTc_7UoAXOhN_B2Dtr34rDCJCz_r_9vDqpypEBnLVEXRHEbQzRv_cfQnwDwpYJ_YVFQONH5zo6E60XnmEw_Y5PSz7rQZCir9nveVr32CaL5QZfxqTvjbjuODlcC7XFpPouqWQIddCjcFwZZ5F7m9GarP3iBENgIErUURHQoDQ9Wm9qImICQZP3EBYnLp9sKSAYRNRD7n89RpO5PC3vGAtOF6wAT5Pn8bnuQZfeex8NXlEDgVGvwLNPYM3SSiZnDVZiTB2m4rP_1K2IMpfjnjY7ht8t1Nxr7gxDhoa1Y8tLXuBu5RvfV3n2FodHIACldYTVTBMS51HeMLJV6PURxHyY5YOtQ65iMZZKMB5fGD2WR0UFhtoMXWuMJsfkhmFZepCeoIphD55CN7ATEPrm7zldVt8hIkjsfJsFX0WQB1YhnhiEkn-VRfNYCXO55ucT1ZsbbpwufsnPbtgGjISEHDrZ7me58XfSPGsBu1ThpQ3aV9dYsrUgaxQ59R9MGU4zEKOAqt5qoV6eHz5Azd1RihOM0PnkEYF_VLM9XYluRNcucQESDtPkW_TfLu_Kq2SLs5hx5LbamNGJ5w_1hrhTgPna-FEWThi30bBWw-oAbpGOJVnpVnBntrlUR1jgZTDplFce-D5W8e0Hl-BSq_9LEgOskUjeBFxF6SZGb97evQ958nCySeRi6j4XSTOK3DlIE4TEFClvg..
+2022-03-16 14:32:09,146 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/users/me
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:09,444 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/users/me
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 110
+content-encoding: gzip
+Connection: keep-alive
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 03ce54a7a14016e8fed45ae63f1d92276
+Date: Wed, 16 Mar 2022 14:32:09 GMT
+Content-Type: application/json
+
+{"type":"user","id":"3547327019","name":"Box CLI - JVDM","login":"AutomationUser_569286_6OK5LHrGnz@boxdevedition.com","created_at":"2018-04-12T08:05:14-07:00","modified_at":"2022-02-14T07:38:33-08:00","language":"en","timezone":"America\/Los_Angeles","space_amount":10737418240,"space_used":79770659,"max_upload_size":53687091200,"status":"active","job_title":"","phone":"","address":"","avatar_url":"https:\/\/vertium.app.box.com\/api\/avatar\/large\/3547327019","notification_email":[]}
+2022-03-16 14:32:09,445 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/users/3547327019
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:09,735 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/users/3547327019
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 118
+content-encoding: gzip
+Connection: keep-alive
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 08b3a5a88d0416d2dbc1d947b86cfa10a
+Date: Wed, 16 Mar 2022 14:32:09 GMT
+Content-Type: application/json
+
+{"type":"user","id":"3547327019","name":"Box CLI - JVDM","login":"AutomationUser_569286_6OK5LHrGnz@boxdevedition.com","created_at":"2018-04-12T08:05:14-07:00","modified_at":"2022-02-14T07:38:33-08:00","language":"en","timezone":"America\/Los_Angeles","space_amount":10737418240,"space_used":79770659,"max_upload_size":53687091200,"status":"active","job_title":"","phone":"","address":"","avatar_url":"https:\/\/vertium.app.box.com\/api\/avatar\/large\/3547327019","notification_email":[]}
+2022-03-16 14:32:09,741 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Service Account User: AutomationUser_569286_6OK5LHrGnz@boxdevedition.com
+2022-03-16 14:32:09,778 DEBUG com.box.sdk.BoxLogger [main] Request
+POST https://api.box.com/oauth2/token
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:10,280 DEBUG com.box.sdk.BoxLogger [main] Response
+POST https://api.box.com/oauth2/token
+HTTP/1.1 200 OK
+Strict-Transport-Security: max-age=31536000
+Cache-Control: no-store
+Connection: keep-alive
+Set-Cookie: site_preference=desktop; path=/; domain=.box.com; secure, cn=46; expires=Thu, 16-Mar-2023 14:32:10 GMT; Max-Age=31536000; path=/; domain=.app.box.com; secure, bv=OPS-45085; expires=Wed, 23-Mar-2022 14:32:10 GMT; Max-Age=604800; path=/; domain=.app.box.com; secure, box_visitor_id=6231f4ea1aaae1.48235421; expires=Thu, 16-Mar-2023 14:32:10 GMT; Max-Age=31536000; path=/; domain=.box.com; secure
+Content-Length: 996
+Date: Wed, 16 Mar 2022 14:32:10 GMT
+Content-Type: application/json
+
+{"access_token":"1!aAqgJASgDoHSD4Nj-tNXZvnMt2RRFxrxJUeGTVPsb9BqR599bAPyqShlfAQRU0FDidSNWmFeynbVU52wIeJmFcnzdFPNZbzKb8myzZJfmMrKtgN2TwCVRXkkUOgGR8C6zV6VHJLncNo-rP3Cse0JMOQW3_flNPW2U4U5zZIBceDJpdgdHXNNT5nUqOWqF9DkA3i2PB9kmvtccs8F5QuwjYHpK9Vxqv-orz61DWCPx3jMXKMBlVJ3BihdSMs2t0qPgKkDdH-a7Za5ooOaxSjSqe6Kok9A2XypcsO2SUbdGqg9fRInNv02F22t3pob_EDC6JmPIFleaYWCW04mc3F01pkDNS8_M5Nz0fP-dlTL0KPk4UhvKMMnQUxmm6Za-S3TvUzErYXkeLrsVNVvH7wIqklmdBbX-Rsxu7n1lgSn06D4ZVo2AOWOWQrlLhT8-yun-D-4TcP3b48DYLgNRgq_v9L_93xTqx1KVqHIzkezaofJ9nu60YuiI0BmxnS8prnkmwNzWCZtP9w9MSscs0ReqLQA9Muj9tLPlsFAR_gK4qcQCtqZbVbzR3_c-nCfEHTI98OsXIHhcbfaGZfAIEfbKkWTlPQ1wyWS-HE7lt4mSlxNT9okP3sD0Bf_BFF44tUFxobfEN9SZytD2Ybp4oFBSewymTFdu0-z_YRF_Pn4_EKTGQ5ohuXIh0yLHONm3L705PMRkBvOgzgnAAD0yvBK15xRMN1VVyL-7UL67MnFZaPmeQtPosCZ9VaxEX0j6n9ykaPyBWMyyZOQe9RUKE88ucVmaOdrYQXcS6U-JqhyAODWUmeyKcZJ-bXyFaRzC5dorJIcabu_OUos52UJmwSY2r0KPldo58gqAngb68jlNd4Xjc4NF543oZMOLpfeXELADrem8oXA8Sur93dnUx6h","expires_in":3720,"restricted_to":[],"token_type":"bearer"}
+2022-03-16 14:32:10,282 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] User 3312464263 Account Token: 1!aAqgJASgDoHSD4Nj-tNXZvnMt2RRFxrxJUeGTVPsb9BqR599bAPyqShlfAQRU0FDidSNWmFeynbVU52wIeJmFcnzdFPNZbzKb8myzZJfmMrKtgN2TwCVRXkkUOgGR8C6zV6VHJLncNo-rP3Cse0JMOQW3_flNPW2U4U5zZIBceDJpdgdHXNNT5nUqOWqF9DkA3i2PB9kmvtccs8F5QuwjYHpK9Vxqv-orz61DWCPx3jMXKMBlVJ3BihdSMs2t0qPgKkDdH-a7Za5ooOaxSjSqe6Kok9A2XypcsO2SUbdGqg9fRInNv02F22t3pob_EDC6JmPIFleaYWCW04mc3F01pkDNS8_M5Nz0fP-dlTL0KPk4UhvKMMnQUxmm6Za-S3TvUzErYXkeLrsVNVvH7wIqklmdBbX-Rsxu7n1lgSn06D4ZVo2AOWOWQrlLhT8-yun-D-4TcP3b48DYLgNRgq_v9L_93xTqx1KVqHIzkezaofJ9nu60YuiI0BmxnS8prnkmwNzWCZtP9w9MSscs0ReqLQA9Muj9tLPlsFAR_gK4qcQCtqZbVbzR3_c-nCfEHTI98OsXIHhcbfaGZfAIEfbKkWTlPQ1wyWS-HE7lt4mSlxNT9okP3sD0Bf_BFF44tUFxobfEN9SZytD2Ybp4oFBSewymTFdu0-z_YRF_Pn4_EKTGQ5ohuXIh0yLHONm3L705PMRkBvOgzgnAAD0yvBK15xRMN1VVyL-7UL67MnFZaPmeQtPosCZ9VaxEX0j6n9ykaPyBWMyyZOQe9RUKE88ucVmaOdrYQXcS6U-JqhyAODWUmeyKcZJ-bXyFaRzC5dorJIcabu_OUos52UJmwSY2r0KPldo58gqAngb68jlNd4Xjc4NF543oZMOLpfeXELADrem8oXA8Sur93dnUx6h
+2022-03-16 14:32:10,283 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/users/me
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:10,581 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/users/me
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 118
+content-encoding: gzip
+Connection: keep-alive
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 1124e6e412499557ac21b35dae102ec0
+Date: Wed, 16 Mar 2022 14:32:10 GMT
+Content-Type: application/json
+
+{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com","created_at":"2018-02-06T07:21:48-08:00","modified_at":"2022-03-15T02:42:52-07:00","language":"gb","timezone":"Europe\/London","space_amount":999999999999999,"space_used":68381297123,"max_upload_size":53687091200,"status":"active","job_title":"","phone":"+447983983929","address":"","avatar_url":"https:\/\/vertium.app.box.com\/api\/avatar\/large\/3312464263","notification_email":[]}
+2022-03-16 14:32:10,581 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/users/3312464263
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:10,897 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/users/3312464263
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 113
+content-encoding: gzip
+Connection: keep-alive
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 0732d5065bd2d8c865b0639ecf2256314
+Date: Wed, 16 Mar 2022 14:32:10 GMT
+Content-Type: application/json
+
+{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com","created_at":"2018-02-06T07:21:48-08:00","modified_at":"2022-03-15T02:42:52-07:00","language":"gb","timezone":"Europe\/London","space_amount":999999999999999,"space_used":68381297123,"max_upload_size":53687091200,"status":"active","job_title":"","phone":"+447983983929","address":"","avatar_url":"https:\/\/vertium.app.box.com\/api\/avatar\/large\/3312464263","notification_email":[]}
+2022-03-16 14:32:10,897 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Account User 3312464263: postmaster@vertium.com
+2022-03-16 14:32:10,899 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/folders/0/items/?limit=1000&offset=0
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:12,122 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/folders/0/items/?limit=1000&offset=0
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 1045
+content-encoding: gzip
+Connection: keep-alive
+cache-control: no-cache, no-store
+box-request-id: 04957c471f6114c082be50e288cbad5fe
+strict-transport-security: max-age=31536000
+Date: Wed, 16 Mar 2022 14:32:12 GMT
+Content-Type: application/json
+
+{"total_count":85,"entries":[{"type":"folder","id":"127329585739","sequence_id":"3","etag":"3","name":"!LargeFile"},{"type":"folder","id":"117664226266","sequence_id":"3","etag":"3","name":"!Man User 2 Owned Folder"},{"type":"folder","id":"102178833319","sequence_id":"11","etag":"11","name":"!Ownership-Man User 1"},{"type":"folder","id":"104140180627","sequence_id":"0","etag":"0","name":"1930"},{"type":"folder","id":"104135733237","sequence_id":"0","etag":"0","name":"1931"},{"type":"folder","id":"148567052187","sequence_id":"1","etag":"1","name":"App Owner Content"},{"type":"folder","id":"52109070458","sequence_id":"2","etag":"2","name":"Application Folder 1"},{"type":"folder","id":"52109036636","sequence_id":"2","etag":"2","name":"Application Folder 2"},{"type":"folder","id":"48506802471","sequence_id":"0","etag":"0","name":"Box for Salesforce"},{"type":"folder","id":"47233074228","sequence_id":"0","etag":"0","name":"Box Reports"},{"type":"folder","id":"145828329898","sequence_id":"1","etag":"1","name":"BoxDriveFR"},{"type":"folder","id":"145827662059","sequence_id":"1","etag":"1","name":"BoxDriveFRPics"},{"type":"folder","id":"78387749096","sequence_id":"0","etag":"0","name":"Capture Uploads"},{"type":"folder","id":"132315646390","sequence_id":"0","etag":"0","name":"CloudFastPath"},{"type":"folder","id":"132317489827","sequence_id":"0","etag":"0","name":"Customer"},{"type":"folder","id":"149523795023","sequence_id":"0","etag":"0","name":"DCTM"},{"type":"folder","id":"114624577275","sequence_id":"2","etag":"2","name":"External Client Folder"},{"type":"folder","id":"113718619456","sequence_id":"0","etag":"0","name":"External Folder Access with TOS"},{"type":"folder","id":"114334560417","sequence_id":"0","etag":"0","name":"Folder 1"},{"type":"folder","id":"50983385758","sequence_id":"0","etag":"0","name":"Folder Inventory"},{"type":"folder","id":"46272045578","sequence_id":"0","etag":"0","name":"Governance"},{"type":"folder","id":"115463167642","sequence_id":"0","etag":"0","name":"HP Smart"},{"type":"folder","id":"156384485618","sequence_id":"0","etag":"0","name":"ISO"},{"type":"folder","id":"73999459283","sequence_id":"0","etag":"0","name":"Jacques van der Merwe"},{"type":"folder","id":"116466617918","sequence_id":"0","etag":"0","name":"JSON Config"},{"type":"folder","id":"139707827015","sequence_id":"0","etag":"0","name":"JVDM2"},{"type":"folder","id":"54239347086","sequence_id":"1","etag":"1","name":"LN-1995"},{"type":"folder","id":"54238855959","sequence_id":"1","etag":"1","name":"LN-1996"},{"type":"folder","id":"48627577700","sequence_id":"0","etag":"0","name":"Loreal Demo"},{"type":"folder","id":"150726567203","sequence_id":"0","etag":"0","name":"Lovely External Folder"},{"type":"folder","id":"127764413795","sequence_id":"0","etag":"0","name":"Managed User 3 Owned Folder"},{"type":"folder","id":"131256735845","sequence_id":"1","etag":"1","name":"Med-El"},{"type":"folder","id":"119960613784","sequence_id":"0","etag":"0","name":"Microsoft Teams Chat Files"},{"type":"folder","id":"116758098413","sequence_id":"0","etag":"0","name":"Microsoft Teams Folder"},{"type":"folder","id":"51622337037","sequence_id":"0","etag":"0","name":"MPS Demo"},{"type":"folder","id":"64084337695","sequence_id":"0","etag":"0","name":"MU1"},{"type":"folder","id":"64083443503","sequence_id":"0","etag":"0","name":"MU2"},{"type":"folder","id":"46272383909","sequence_id":"0","etag":"0","name":"My Box Notes"},{"type":"folder","id":"144278458553","sequence_id":"0","etag":"0","name":"My Sign Requests"},{"type":"folder","id":"144400374758","sequence_id":"0","etag":"0","name":"My Signed Documents"},{"type":"folder","id":"149406286078","sequence_id":"0","etag":"0","name":"Notability"},{"type":"folder","id":"123704222569","sequence_id":"0","etag":"0","name":"Notifications"},{"type":"folder","id":"108653326254","sequence_id":"0","etag":"0","name":"Owner Source Folder"},{"type":"folder","id":"108666412410","sequence_id":"1","etag":"1","name":"Ownership Test"},{"type":"folder","id":"122921912516","sequence_id":"0","etag":"0","name":"Ownership-Postmaster"},{"type":"folder","id":"47415622776","sequence_id":"0","etag":"0","name":"Parent 2018-03-02T05:12:02.162Z"},{"type":"folder","id":"47431890489","sequence_id":"0","etag":"0","name":"Parent 2018-03-02T18:36:36.296Z"},{"type":"folder","id":"47434698453","sequence_id":"0","etag":"0","name":"Parent 2018-03-02T18:57:39.620Z"},{"type":"folder","id":"47434735154","sequence_id":"0","etag":"0","name":"Parent 2018-03-02T18:58:10.951Z"},{"type":"folder","id":"47484001613","sequence_id":"0","etag":"0","name":"Parent 2018-03-05T14:16:28.214Z"},{"type":"folder","id":"99621345984","sequence_id":"0","etag":"0","name":"Personal Folder - Managed User 3"},{"type":"folder","id":"49621888362","sequence_id":"0","etag":"0","name":"Platform Application"},{"type":"folder","id":"132894282295","sequence_id":"1","etag":"1","name":"Polpharma"},{"type":"folder","id":"117663564512","sequence_id":"0","etag":"0","name":"Postmaster Owned Folder"},{"type":"folder","id":"139755267901","sequence_id":"1","etag":"1","name":"PSNI_CCG_FileRequest_Test"},{"type":"folder","id":"48830368266","sequence_id":"2","etag":"2","name":"Range 10000"},{"type":"folder","id":"53826530675","sequence_id":"0","etag":"0","name":"Range 20000"},{"type":"folder","id":"75841158321","sequence_id":"1","etag":"1","name":"Relay"},{"type":"folder","id":"51950180768","sequence_id":"0","etag":"0","name":"RJUK"},{"type":"folder","id":"103036533051","sequence_id":"0","etag":"0","name":"Salesforce-Vertium"},{"type":"folder","id":"105973472264","sequence_id":"0","etag":"0","name":"Salesforce-Vertium-Zone 2"},{"type":"folder","id":"2379701833","sequence_id":"0","etag":"0","name":"SalesforceIntRoot"},{"type":"folder","id":"106229052301","sequence_id":"0","etag":"0","name":"Sample USA Files"},{"type":"folder","id":"47692626908","sequence_id":"3","etag":"3","name":"Scratchpad"},{"type":"folder","id":"47625049455","sequence_id":"0","etag":"0","name":"ServiceNow"},{"type":"folder","id":"49992409561","sequence_id":"0","etag":"0","name":"Single File Collaboration Demo"},{"type":"folder","id":"68586197483","sequence_id":"12","etag":"12","name":"Skills"},{"type":"folder","id":"123071196170","sequence_id":"0","etag":"0","name":"SmallFolder"},{"type":"folder","id":"148984438241","sequence_id":"0","etag":"0","name":"TechSmith"},{"type":"folder","id":"116948962754","sequence_id":"0","etag":"0","name":"test 123"},{"type":"folder","id":"52109048934","sequence_id":"1","etag":"1","name":"Top Level Application Folder"},{"type":"folder","id":"127698721919","sequence_id":"1","etag":"1","name":"V2 Folder Data"},{"type":"folder","id":"116377733279","sequence_id":"1","etag":"1","name":"Virus Service"},{"type":"file","id":"475817682885","file_version":{"type":"file_version","id":"609128221467","sha1":"fa1c3831045922586f4c80ebec9bd1aac092042b"},"sequence_id":"15","etag":"15","sha1":"fa1c3831045922586f4c80ebec9bd1aac092042b","name":"10mb_3.pdf"},{"type":"file","id":"615480652144","file_version":{"type":"file_version","id":"652461870544","sha1":"8bb00c288ed73f6ba50f3930060e73a71f663daf"},"sequence_id":"4","etag":"4","sha1":"8bb00c288ed73f6ba50f3930060e73a71f663daf","name":"123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789.png"},{"type":"file","id":"880268351284","file_version":{"type":"file_version","id":"946289312884","sha1":"472547c3c5ff52cc8e3979464410ef9d8714f71c"},"sequence_id":"0","etag":"0","sha1":"472547c3c5ff52cc8e3979464410ef9d8714f71c","name":"CanonPowerShotA1300.jpeg"},{"type":"file","id":"771907866098","file_version":{"type":"file_version","id":"823877493698","sha1":"3e32277e0e3635b5b6cd6a7aa7ab2daea26c7f3a"},"sequence_id":"2","etag":"2","sha1":"3e32277e0e3635b5b6cd6a7aa7ab2daea26c7f3a","name":"G4S.TIF"},{"type":"file","id":"747757367250","file_version":{"type":"file_version","id":"796798054268","sha1":"e88bb2f07382f4c1574974af7073f5802c6f7b84"},"sequence_id":"2","etag":"2","sha1":"e88bb2f07382f4c1574974af7073f5802c6f7b84","name":"Office Online Only.xlsx"},{"type":"file","id":"293730268699","file_version":{"type":"file_version","id":"309190693339","sha1":"0d90f84516b90a2a405669da5cd7a7bc297aac87"},"sequence_id":"16","etag":"16","sha1":"0d90f84516b90a2a405669da5cd7a7bc297aac87","name":"rename44.pdf"},{"type":"file","id":"771940988676","file_version":{"type":"file_version","id":"823918107876","sha1":"d6c243ea75b5b43952587820824704eadd38d1c7"},"sequence_id":"0","etag":"0","sha1":"d6c243ea75b5b43952587820824704eadd38d1c7","name":"Samples.csv"},{"type":"file","id":"477698837523","file_version":{"type":"file_version","id":"505683592323","sha1":"2b6b96f0b78b2da0b6f04eefec9e0af5084c40be"},"sequence_id":"5","etag":"5","sha1":"2b6b96f0b78b2da0b6f04eefec9e0af5084c40be","name":"01.09.14 Amendment Harvard School of Public Health Prof M Ezzati P36026.pdf"},{"type":"file","id":"579046910171","file_version":{"type":"file_version","id":"613949291771","sha1":"bfa4eef41b6c5cf99fb6fdc21573b00d04ba7400"},"sequence_id":"0","etag":"0","sha1":"bfa4eef41b6c5cf99fb6fdc21573b00d04ba7400","name":"Video Trimmed E.mp4"},{"type":"file","id":"361623754427","file_version":{"type":"file_version","id":"693337961321","sha1":"b1f5d64949a73f5ef03fa3793ecbb33998229a3e"},"sequence_id":"8","etag":"8","sha1":"b1f5d64949a73f5ef03fa3793ecbb33998229a3e","name":"Gsuite Demo Documents.gdoc"},{"type":"file","id":"671532163253","file_version":{"type":"file_version","id":"796782748549","sha1":"3068322803f06d173baf12baedbd045f3106321a"},"sequence_id":"6","etag":"6","sha1":"3068322803f06d173baf12baedbd045f3106321a","name":"reference_document_1 (1).xlsx"},{"type":"file","id":"615355351879","file_version":{"type":"file_version","id":"903504510342","sha1":"f1d7231c675f10af7c6f4b9d9a4c8b9336512248"},"sequence_id":"6","etag":"6","sha1":"f1d7231c675f10af7c6f4b9d9a4c8b9336512248","name":"Document 1.docx"}],"offset":0,"limit":1000,"order":[{"by":"type","direction":"ASC"},{"by":"name","direction":"ASC"}]}
+2022-03-16 14:32:12,125 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 127329585739 - !LargeFile
+2022-03-16 14:32:12,126 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 117664226266 - !Man User 2 Owned Folder
+2022-03-16 14:32:12,126 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 102178833319 - !Ownership-Man User 1
+2022-03-16 14:32:12,126 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 104140180627 - 1930
+2022-03-16 14:32:12,126 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 104135733237 - 1931
+2022-03-16 14:32:12,127 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 148567052187 - App Owner Content
+2022-03-16 14:32:12,127 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 52109070458 - Application Folder 1
+2022-03-16 14:32:12,127 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 52109036636 - Application Folder 2
+2022-03-16 14:32:12,127 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 48506802471 - Box for Salesforce
+2022-03-16 14:32:12,127 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47233074228 - Box Reports
+2022-03-16 14:32:12,127 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 145828329898 - BoxDriveFR
+2022-03-16 14:32:12,128 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 145827662059 - BoxDriveFRPics
+2022-03-16 14:32:12,128 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 78387749096 - Capture Uploads
+2022-03-16 14:32:12,128 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 132315646390 - CloudFastPath
+2022-03-16 14:32:12,128 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 132317489827 - Customer
+2022-03-16 14:32:12,128 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 149523795023 - DCTM
+2022-03-16 14:32:12,128 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 114624577275 - External Client Folder
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 113718619456 - External Folder Access with TOS
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 114334560417 - Folder 1
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 50983385758 - Folder Inventory
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 46272045578 - Governance
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 115463167642 - HP Smart
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 156384485618 - ISO
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 73999459283 - Jacques van der Merwe
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 116466617918 - JSON Config
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 139707827015 - JVDM2
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 54239347086 - LN-1995
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 54238855959 - LN-1996
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 48627577700 - Loreal Demo
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 150726567203 - Lovely External Folder
+2022-03-16 14:32:12,129 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 127764413795 - Managed User 3 Owned Folder
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 131256735845 - Med-El
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 119960613784 - Microsoft Teams Chat Files
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 116758098413 - Microsoft Teams Folder
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 51622337037 - MPS Demo
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 64084337695 - MU1
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 64083443503 - MU2
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 46272383909 - My Box Notes
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 144278458553 - My Sign Requests
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 144400374758 - My Signed Documents
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 149406286078 - Notability
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 123704222569 - Notifications
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 108653326254 - Owner Source Folder
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 108666412410 - Ownership Test
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 122921912516 - Ownership-Postmaster
+2022-03-16 14:32:12,130 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47415622776 - Parent 2018-03-02T05:12:02.162Z
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47431890489 - Parent 2018-03-02T18:36:36.296Z
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47434698453 - Parent 2018-03-02T18:57:39.620Z
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47434735154 - Parent 2018-03-02T18:58:10.951Z
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47484001613 - Parent 2018-03-05T14:16:28.214Z
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 99621345984 - Personal Folder - Managed User 3
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 49621888362 - Platform Application
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 132894282295 - Polpharma
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 117663564512 - Postmaster Owned Folder
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 139755267901 - PSNI_CCG_FileRequest_Test
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 48830368266 - Range 10000
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 53826530675 - Range 20000
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 75841158321 - Relay
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 51950180768 - RJUK
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 103036533051 - Salesforce-Vertium
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 105973472264 - Salesforce-Vertium-Zone 2
+2022-03-16 14:32:12,131 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 2379701833 - SalesforceIntRoot
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 106229052301 - Sample USA Files
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47692626908 - Scratchpad
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 47625049455 - ServiceNow
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 49992409561 - Single File Collaboration Demo
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 68586197483 - Skills
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 123071196170 - SmallFolder
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 148984438241 - TechSmith
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 116948962754 - test 123
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 52109048934 - Top Level Application Folder
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 127698721919 - V2 Folder Data
+2022-03-16 14:32:12,132 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Folder 116377733279 - Virus Service
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 475817682885 - 10mb_3.pdf
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 615480652144 - 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789.png
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 880268351284 - CanonPowerShotA1300.jpeg
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 771907866098 - G4S.TIF
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 747757367250 - Office Online Only.xlsx
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 293730268699 - rename44.pdf
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 771940988676 - Samples.csv
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 477698837523 - 01.09.14 Amendment Harvard School of Public Health Prof M Ezzati P36026.pdf
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 579046910171 - Video Trimmed E.mp4
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 361623754427 - Gsuite Demo Documents.gdoc
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 671532163253 - reference_document_1 (1).xlsx
+2022-03-16 14:32:12,133 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File 615355351879 - Document 1.docx
+2022-03-16 14:32:12,134 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/users/me
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:12,404 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/users/me
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 89
+content-encoding: gzip
+Connection: keep-alive
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 069fc4d952b3726b03a7c8cc3861875a3
+Date: Wed, 16 Mar 2022 14:32:12 GMT
+Content-Type: application/json
+
+{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com","created_at":"2018-02-06T07:21:48-08:00","modified_at":"2022-03-15T02:42:52-07:00","language":"gb","timezone":"Europe\/London","space_amount":999999999999999,"space_used":68381297123,"max_upload_size":53687091200,"status":"active","job_title":"","phone":"+447983983929","address":"","avatar_url":"https:\/\/vertium.app.box.com\/api\/avatar\/large\/3312464263","notification_email":[]}
+2022-03-16 14:32:12,405 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/users/3312464263
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:12,691 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/users/3312464263
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 90
+content-encoding: gzip
+Connection: keep-alive
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 05ce208f6afef39dae9f4e602fbf717a6
+Date: Wed, 16 Mar 2022 14:32:12 GMT
+Content-Type: application/json
+
+{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com","created_at":"2018-02-06T07:21:48-08:00","modified_at":"2022-03-15T02:42:52-07:00","language":"gb","timezone":"Europe\/London","space_amount":999999999999999,"space_used":68381297123,"max_upload_size":53687091200,"status":"active","job_title":"","phone":"+447983983929","address":"","avatar_url":"https:\/\/vertium.app.box.com\/api\/avatar\/large\/3312464263","notification_email":[]}
+2022-03-16 14:32:12,692 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] Account User 3312464263: postmaster@vertium.com
+2022-03-16 14:32:12,693 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/files/771940988676
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:13,081 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/files/771940988676
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 216
+content-encoding: gzip
+Connection: keep-alive
+etag: W/"0"
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 0ffcdacb14307cbd960360caa82590e0f
+Date: Wed, 16 Mar 2022 14:32:13 GMT
+Content-Type: application/json
+
+{"type":"file","id":"771940988676","file_version":{"type":"file_version","id":"823918107876","sha1":"d6c243ea75b5b43952587820824704eadd38d1c7"},"sequence_id":"0","etag":"0","sha1":"d6c243ea75b5b43952587820824704eadd38d1c7","name":"Samples.csv","description":"","size":16153,"path_collection":{"total_count":1,"entries":[{"type":"folder","id":"0","sequence_id":null,"etag":null,"name":"All Files"}]},"created_at":"2021-02-03T08:54:58-08:00","modified_at":"2021-02-03T08:54:58-08:00","trashed_at":null,"purged_at":null,"content_created_at":"2019-04-12T04:55:21-07:00","content_modified_at":"2019-04-12T04:55:21-07:00","created_by":{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com"},"modified_by":{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com"},"owned_by":{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com"},"shared_link":null,"parent":{"type":"folder","id":"0","sequence_id":null,"etag":null,"name":"All Files"},"item_status":"active"}
+2022-03-16 14:32:13,084 DEBUG com.box.sdk.BoxLogger [main] Request
+GET https://api.box.com/2.0/files/771940988676
+Accept-Charset: utf-8
+X-Box-UA: agent=box-java-sdk/3.1.1; env=Java/1.8.0_312
+User-Agent: Box Java SDK v3.1.1 (Java 1.8.0_312)
+Accept-Encoding: gzip
+2022-03-16 14:32:13,503 DEBUG com.box.sdk.BoxLogger [main] Response
+GET https://api.box.com/2.0/files/771940988676
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+x-envoy-upstream-service-time: 233
+content-encoding: gzip
+Connection: keep-alive
+etag: W/"0"
+cache-control: no-cache, no-store
+strict-transport-security: max-age=31536000
+box-request-id: 0caf9c58e26b16e6fa49040e46bd3f2e4
+Date: Wed, 16 Mar 2022 14:32:13 GMT
+Content-Type: application/json
+
+{"type":"file","id":"771940988676","file_version":{"type":"file_version","id":"823918107876","sha1":"d6c243ea75b5b43952587820824704eadd38d1c7"},"sequence_id":"0","etag":"0","sha1":"d6c243ea75b5b43952587820824704eadd38d1c7","name":"Samples.csv","description":"","size":16153,"path_collection":{"total_count":1,"entries":[{"type":"folder","id":"0","sequence_id":null,"etag":null,"name":"All Files"}]},"created_at":"2021-02-03T08:54:58-08:00","modified_at":"2021-02-03T08:54:58-08:00","trashed_at":null,"purged_at":null,"content_created_at":"2019-04-12T04:55:21-07:00","content_modified_at":"2019-04-12T04:55:21-07:00","created_by":{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com"},"modified_by":{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com"},"owned_by":{"type":"user","id":"3312464263","name":"Postmaster (Vertium)","login":"postmaster@vertium.com"},"shared_link":null,"parent":{"type":"folder","id":"0","sequence_id":null,"etag":null,"name":"All Files"},"item_status":"active"}
+2022-03-16 14:32:13,505 INFO com.box.bc.boxconnectiontest.ConnectionCommand [main] File Information 771940988676 - Samples.csv
